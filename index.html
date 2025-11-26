@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Makes sure its scaled to user's screen resolution-->
+   <meta name="theme-color" content="#2196F3" id="theme-color-meta">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>WeatherWise</title>
+</head>
+
+<body>
+<!--Screen areas, home, activity, registration, and add-->
+  <!-- Home Screen -->
+  <section id="home-screen" class="screen">
+
+    <div class="circle-a"></div>
+    <div class="circle-b"></div>
+
+    <div class="welcome-container">
+      <div class="welcome-circle">
+        <div class="circle-content">
+          <h1 class="welcome-title">Welcome to WeatherWise!</h1>
+          <p class="welcome-subtitle">Let's get started</p>
+      </div>
+    </div>
+    
+    <input type="text" id="city" placeholder="Enter city">
+    <div class="weather-buttons-container">
+    <button id="get-weather-by-city">Get Weather</button>
+    <br>
+    <button id="get-weather-by-GPS">Use My Location</button>
+    </div>
+    <p id="weather"></p>
+
+    <!-- Activity Buttons -->
+    <div class="activity-buttons">
+    <button id="favourite-activities-btn">Favourite Activities</button>
+    <button id="random-activities-btn">Random Activities</button>
+    <button id="generate-activities-btn">Generate an Activity</button>
+    </div>
+
+    <!-- Navigation buttons-->
+    <div class="nav-bar">
+    <button class="go-home">Home</button>
+    <button class="go-add">Add</button>
+    <button class="go-activities">Activities</button>
+    </div>
+  </section>
+
+
+  <!-- Registration Screen -->
+  <section id="registration-screen" class="screen">
+    <div class="circle-a"></div>
+    <div class="circle-b"></div>
+
+    <div class="welcome-container">
+      <!-- Message Bubble section-->
+      <div class="welcome-circle">
+        <div class="circle-content">
+          <h1 class="welcome-title">Welcome to WeatherWise!</h1>
+          <p class="welcome-subtitle">Let's help you get started</p>
+      </div>
+    </div>
+
+    <div class="registration-image">
+            <img src="registration-decor.png" alt="Registration Decor" class="registration-decor">
+        </div>
+
+    <div class="registration-form">
+      <input type="text" id="name" placeholder="Enter your name">
+      <input type="text" id="age" placeholder="Enter your age">
+      <button id="register-btn">Register</button>
+    </div>
+  </section>
+
+
+  <!-- Add Screen -->
+  <section id="add-screen" class="screen">
+
+      <div class="circle-a"></div>
+      <div class="circle-b"></div>
+
+      <h2 id="city-name">Add Custom Activity</h2>
+      
+      <div class="add-activity-form">
+          <input type="text" id="custom-activity-input" placeholder="Enter your activity">
+          
+          <div class="weather-selection">
+              <h3>Select suitable weather types:</h3>
+              <div class="weather-checkboxes">
+                  <label><input type="checkbox" value="sunny"> ☀️ Sunny</label>
+                  <label><input type="checkbox" value="cloudy"> ☁️ Cloudy</label>
+                  <label><input type="checkbox" value="rainy"> 🌧️ Rainy</label>
+                  <label><input type="checkbox" value="snowy"> ❄️ Snowy</label>
+                  <label><input type="checkbox" value="windy"> 💨 Windy</label>
+                  <label><input type="checkbox" value="general" checked> 🌤️ Any Weather</label>
+              </div>
+          </div>
+          
+          <button id="save-custom-activity">Save Activity</button>
+      </div>
+
+      <!-- Navigation buttons-->
+      <div class="nav-bar">
+          <button class="go-home">Home</button>
+          <button class="go-add">Add</button>
+          <button class="go-activities">Activities</button>
+      </div>
+  </section>
+
+
+  <!-- Activities List Screen -->
+  <section id="activities-screen" class="screen">
+
+    <div class="circle-a"></div>
+    <div class="circle-b"></div>
+
+    <div class="permission-section">
+        <div class="toggle-container">
+            <label class="toggle-label">
+                <span class="toggle-text">Location Access</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="location-toggle" class="toggle-input">
+                    <span class="toggle-slider"></span>
+                </div>
+            </label>
+            <p class="toggle-description">Enable for automatic weather updates using your location</p>
+        </div>
+    </div>
+
+    <div id="activities-content" class="activities-content">
+        <!-- Activities will be load here -->
+    </div>
+
+    <!-- Navigation buttons-->
+    <div class="nav-bar">
+    <button class="go-home">Home</button>
+    <button class="go-add">Add</button>
+    <button class="go-activities">Activities</button>
+    </div>
+  </section>
+
+
+<script src="app.js"></script>
+</body>
+</html>
